@@ -1,0 +1,29 @@
+.wrapper{
+    background-color: cornsilk;
+    margin: auto;
+    min-height: 500px;
+    text-align: center;
+    width: 435px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.friend_info,
+.addFriend,
+input{
+    padding-left: 55px;
+}
+.friend_info{
+    overflow: scroll;
+}
+hr{
+    width: 400px;
+}
+.label_name{
+    color: palevioletred; 
+    font-weight: bolder;
+}
+tr{
+    margin-bottom: 5px;
+}
+table{
+    margin-left: 55px;
+}

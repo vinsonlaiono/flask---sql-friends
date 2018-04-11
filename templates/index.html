@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Friends</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/style.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>These are all my friends!</h1>
+        <div class="friend_info"></div>   
+        {% for friend in friends %} 
+            <table>                
+                <tr>
+                    <td><label class="label_name" for="">First Name: </label></td>
+                    <td><label class="friend_name" for="">{{ friend.first_name }} </label></td>
+                </tr>
+                <tr>
+                    <td><label class="label_name" for="">Last Name: </label></td>
+                    <td><label for="">{{ friend.last_name }} </label></td>
+                </tr>
+                <tr>
+                    <td><label class="label_name" for="">Occupation: </label></td>
+                    <td><label for="">{{friend.occupation}} </label></td>
+                </tr>
+            </table>
+            <hr>
+            {% endfor %}
+            <div class="addFriend">
+                <form action="create_friend", method = "post">
+                    <table>
+                            <tr>
+                                <td><label for="">First Name: </label></td><td><input type="text" name="first_name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="">Last Name: </label></td><td><input type="text" name="last_name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="">Occupation: </label></td><td><input type="text" name="occupation"></td>
+                            </tr>
+                    </table>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>    
+    
+    </div>
+</body>
+</html>
